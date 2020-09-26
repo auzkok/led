@@ -77,7 +77,7 @@ class Modal extends dn.Process {
 
 	public static function isOpen<T:Modal>(c:Class<T>) {
 		for(w in ALL)
-			if( !w.isClosing() && Std.isOfType(w,c) )
+			if( !w.isClosing() && Std.is(w,c) )
 				return true;
 		return false;
 	}
